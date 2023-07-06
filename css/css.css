@@ -1,0 +1,84 @@
+body {
+	background: #2d2d29;
+}
+
+
+.animacion {
+    animation: rota 2s alternate infinite;
+}
+
+@keyframes rota {
+    to {
+        filter: hue-rotate(1turn);
+    }
+}	
+
+
+.atomo {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.atomo .anillo {
+	position: absolute;
+	width: 175px;
+	height: 60px;
+	border-radius: 50%;
+	border: 6px solid #7e26c7;
+	box-shadow: 0 0 15px #000, 3px 3px 5px rgb(27, 21, 44), inset 4px 2px 10px #222;
+}
+
+.atomo .anillo:nth-child(1) {
+	transform: rotate(0deg);
+	animation: 5s animate1 infinite;
+	animation-delay: 1s;
+}
+
+.atomo .anillo:nth-child(2) {
+	transform: rotate(120deg);
+	animation: 6s animate2 infinite;
+	animation-delay: 1s;
+}
+
+.atomo .anillo:nth-child(3) {
+	transform: rotate(240deg);
+	animation: 7s animate3 infinite;
+	animation-delay: 1s;
+}
+
+
+.atomo .nucleo {
+	animation: 4s animate4 infinite;
+	width: 20px;
+	height: 20px;
+	background:	linear-gradient(to right, #3a1b56, #b17fe3);
+	border-radius: 50%;
+	box-shadow: 	 0 0 10px #222121;
+}
+
+@keyframes animate1 {
+	50% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes animate2 {
+	50% {
+		transform: rotate(420deg);
+	}
+}
+
+@keyframes animate3 {
+	50% {
+		transform: rotate(480deg);
+	}
+}
+
+@keyframes animate4 {
+	50% {
+		transform: rotate(180deg);
+	}
+}
+
